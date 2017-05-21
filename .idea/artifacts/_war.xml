@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="秒杀:war">
+    <output-path>$PROJECT_DIR$/秒杀/target</output-path>
+    <root id="archive" name="seckill.war">
+      <element id="artifact" artifact-name="秒杀:war exploded" />
+    </root>
+  </artifact>
+</component>
