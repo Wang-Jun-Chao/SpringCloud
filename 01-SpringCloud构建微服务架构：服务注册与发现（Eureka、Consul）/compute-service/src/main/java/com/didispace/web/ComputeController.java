@@ -14,15 +14,6 @@ public class ComputeController {
     @Autowired
     private DiscoveryClient client;
 
-    @Deprecated
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public Integer add(@RequestParam Integer a, @RequestParam Integer b) {
-        ServiceInstance instance = client.getLocalServiceInstance();
-        Integer r = a + b;
-        logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
-        return r;
-    }
-
     @GetMapping("/dc")
     public String dc() {
         String services = "Services: " + client.getServices();
